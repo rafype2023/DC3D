@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>360 Data Center View</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css"/>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #panorama-container { width: 100vw; height: 100vh; }
+    </style>
+</head>
+<body>
+    <div id="panorama-container"></div>
+    <a href="index.html" class="back-button">Back to Building View</a>
+    <script>
+        // Get view parameter from URL (e.g., panorama.html?view=room1)
+        const urlParams = new URLSearchParams(window.location.search);
+        const viewName = urlParams.get('view') || 'default_room'; // Default if no param
+
+        // Define your panoramas
+        const panoramas = {
+            room1: {
+                title: "Server Room",
+                hfov: 110,
+                pitch: -3,
+                yaw: 117,
+                type: "equirectangular",
+                panorama: "ASSETS/room1_360.jpg", // Your 360 image
+                hotSpots: [ // Optional: hotspots within the panorama
+                    {
+                        pitch: -2.1,
+                        yaw: 132.9,
+                        type: "info",
+                        text: "Server Rack Alpha"
+                    }
+                ]
+            },
+            room2: {
+                title: "Cooling Unit Area",
+                type: "equirectangular",
+                panorama: "ASSETS/room2_360.jpg"
+            },
+            default_room: { // Fallback
+                title: "Entrance Facilities",
+                type: "equirectangular",
+                panorama: "ASSETS/default360.jpg"
+            }
+        };
+
+        const currentPanoramaConfig = panoramas[viewName] || panoramas['default_room'];
+
+        pannellum.viewer('panorama-container', currentPanoramaConfig);
+    </script>
+</body>
+</html>

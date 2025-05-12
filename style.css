@@ -1,0 +1,42 @@
+/* General Body Styles */
+body {
+    font-family: Arial, sans-serif; /* A common, readable font */
+    margin: 0;                     /* Remove default browser margins */
+    padding: 0;                    /* Remove default browser padding */
+    background-color: lightblue;     /* A light gray background for the page */
+    color: #333;                   /* Default text color */
+    overflow: hidden;              /* Prevents scrollbars if 3D canvas takes full screen */
+}
+
+/* Container for the 3D scene or panorama */
+#scene-container,
+#panorama-container {
+    width: 100vw; /* Viewport Width - 100% of the browser window width */
+    height: 100vh; /* Viewport Height - 100% of the browser window height */
+    display: block; /* Ensure it behaves as a block element */
+}
+
+/* Simple styling for a potential back button */
+.back-button {
+    position: absolute; /* Position it relative to the viewport */
+    top: 20px;
+    left: 20px;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    z-index: 100; /* Make sure it's on top of other elements */
+}
+
+.back-button:hover {
+    background-color: #0056b3;
+}
+
+/* You can add more specific styles here as your project grows */
+
+/* Example: If you have a title */
+h1 {
+    text-align: center;
+    color: #444;
+}
