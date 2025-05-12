@@ -29,17 +29,81 @@
                 hotSpots: [ // Optional: hotspots within the panorama
                     {
                         pitch: -2.1,
-                        yaw: 132.9,
+                        yaw: 40.9,
                         type: "info",
-                        text: "Server Rack Alpha"
+                        text: "MAINFRAME"
+                    },
+		
+		{
+                        pitch: -2.1,
+                        yaw: -58.9,
+                        type: "info",
+                        text: "POD AR 11-15"
+                    },
+		{
+                        pitch: -2.1,
+                        yaw: -168.9,
+                        type: "info",
+                        text: "PCI"
+                    },
+		{
+                        pitch: -3.1,
+                        yaw: -111.9,
+                        type: "info",
+                        text: "APOLLO SSD"
                     }
-                ]
+		]
             },
-            room2: {
-                title: "Cooling Unit Area",
+//---------------
+		room2: {
+                title: "NETWORK CROSS CONNECT",
+                hfov: 110,
+                pitch: -3,
+                yaw: 117,
                 type: "equirectangular",
-                panorama: "ASSETS/room2_360.jpg"
+                panorama: "ASSETS/room2_360.jpg", // Your 360 image
+                hotSpots: [ // Optional: hotspots within the panorama
+                    {
+                        pitch: -2.1,
+                        yaw: 80.9,
+                        type: "info",
+                        text: "B <---------NEXUS--------->A"
+                    },
+		
+		{
+                        pitch: -2.1,
+                        yaw: -40.9,
+                        type: "info",
+                        text: "VELOCLOUDS"
+                    }
+		]
             },
+//------------
+//---------------
+		room3: {
+                title: "ENTRANCE FACILITIES",
+                hfov: 110,
+                pitch: 33,
+                yaw: -67,
+                type: "equirectangular",
+                panorama: "ASSETS/default360.jpg", // Your 360 image
+                hotSpots: [ // Optional: hotspots within the panorama
+                    {
+                        pitch: 42.1,
+                        yaw: -110.9,
+                        type: "info",
+                        text: "CLARO-FIBER"
+                    },
+		
+		{
+                        pitch: 5.1,
+                        yaw: -25.9,
+                        type: "info",
+                        text: "HUB 787"
+                    }
+		]
+            },
+//------------
             default_room: { // Fallback
                 title: "Entrance Facilities",
                 type: "equirectangular",
