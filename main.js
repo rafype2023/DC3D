@@ -22,7 +22,8 @@ function init() {
         1000
     );
     // Use the camera position you found worked best
-    camera.position.set(10, -1, 18); // Or your preferred values
+    camera.position.set(27, 1, 8); // Or your preferred values
+ //camera.position.set(10, -1, 18); // Or your preferred values
 
     renderer = new THREE.WebGLRenderer({ antialias: true });
     renderer.setSize(window.innerWidth, window.innerHeight);
