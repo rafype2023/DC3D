@@ -113,6 +113,11 @@ function addHotpoints() {
             url: 'panorama.html?view=room1',
             name: 'Data Center'
         },
+	{
+            position: new THREE.Vector3(2,10, -55.5), // X, Y, Z - YOU MUST ADJUST THESE!
+            url: 'panorama.html?view=room2',
+            name: 'Network XConnect'
+        },
         {
             position: new THREE.Vector3(2, 1.5, -21), // X, Y, Z - YOU MUST ADJUST THESE!
             url: 'panorama.html?view=server_hall_A',
